@@ -1,0 +1,50 @@
+{% load staticfiles i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- START HEAD SECTION -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>{% block title%}{% endblock%} - {{NAME_INSTANCE}}</title>
+    <link rel="icon" href="{{STATIC_URL}}images/{{NAME_INSTANCE}}_favicon.ico" type="image/png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic">
+    {% load staticfiles %}
+    <!-- css -->
+    <link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/jquery-ui-1.9.2/jquery.ui.all.css" %}">
+    <link rel="stylesheet" href="{% static "bootstrap-3.3.6/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/jquery.dataTables.min.css" %}">
+    <link rel="stylesheet" href="{{STATIC_URL}}css/{{NAME_INSTANCE}}.css">
+
+    {% block stylesheet %}{% endblock %}
+    <!-- END HEAD SECTION  -->
+</head>
+<body>
+<div id="wrapper">
+    <div class="mainnav">
+        <div class="container">
+        </div>
+    </div>
+    <div class="content">
+        <div class="container-fluid">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+{% load staticfiles %}
+<script type="text/javascript" src="{% static "js/jquery.2.1.4.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery-ui-1.9.2/jquery.ui.core.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery-ui-1.9.2/jquery.ui.widget.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery-ui-1.9.2/jquery.ui.datepicker.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.cookie.js" %}"></script>
+<script type="text/javascript" src="{% static "bootstrap-3.3.6/js/bootstrap.min.js" %}"></script>
+<script type="text/javascript" src="{% static "DataTables/Bootstrap-3.3.5/js/bootstrap.min.js" %}"></script>
+<script type="text/javascript" src="{% static "DataTables/DataTables-1.10.9/js/jquery.dataTables.min.js" %}"></script>
+<script type="text/javascript" src="{% static "DataTables/datatables.min.js" %}"></script>
+<script type="text/javascript" src="{% static "plugins/js/modernizr.js" %}"></script>{% block extra_js %}
+{% endblock %}
+</body>
+
+</html>
+

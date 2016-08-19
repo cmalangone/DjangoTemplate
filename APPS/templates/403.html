@@ -1,0 +1,19 @@
+{% extends NAME_INSTANCE|add:"_base.html" %}
+
+{% block title %}Permission Denied{% endblock %}
+{% block content %}
+
+<div class='row'>
+  <div class="col-md-12">
+	<div class="error-template">
+        <h2>Access Denied</h2>
+        <div class="error-details">
+            You are not authorized to access this page.
+        </div>
+        <div class="error-actions">
+            <a href="/" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span> Home Page </a>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

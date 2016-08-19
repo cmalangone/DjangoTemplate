@@ -1,0 +1,40 @@
+#browsebutton {
+    background-color: white;
+}
+
+#browsecsvbutton{
+    background-color: white;
+}
+
+#my-file-selector {
+    display: none;
+}
+
+#csv_manifest_file {
+    display: none;
+}
+
+.form-inline {
+    max-width: 75%
+}
+
+.form-inline-100 {
+    max-width: 100%
+}
+
+#files_list {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+#files_list > li {
+    width: 100%;
+    list-style-type: disc;
+    line-height: 2em;
+    border-bottom: 1px solid #ccc;
+}
+
+#files_list > li span {
+    float: right;
+}

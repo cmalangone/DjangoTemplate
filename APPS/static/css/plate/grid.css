@@ -1,0 +1,50 @@
+table {
+    empty-cells: show;
+}
+td {
+#    width: 2em;
+#    height: 1em;
+    line-height: 1em;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #000;
+}
+#tbody tr:nth-child(odd) td:nth-child(even), tbody tr:nth-child(even) td:nth-child(odd) {
+#    color: #fff;
+#    background-color: #00f;
+#}
+#tbody tr:nth-child(even) td:nth-child(even), tbody tr:nth-child(odd) td:nth-child(odd) {
+#    background-color: #999;
+#}
+#tbody {
+#    counter-reset: rowNumber;
+#}
+#tr {
+#    counter-increment: rowNumber;
+#    counter-reset: cellNumber;
+#}
+#td {
+#    counter-increment: cellNumber;
+#}
+
+#td::before {
+#    content: counter(rowNumber, upper-alpha) counter(cellNumber, decimal);
+#}
+
+
+.odd .odd,
+.even .even {
+    color: #fff;
+    background-color: #00f;
+}
+
+.even .odd,
+.odd .even {
+    background-color: #ccc;
+}
+
+.spanplate {
+  font-size:12px;
+}
